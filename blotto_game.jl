@@ -39,10 +39,12 @@ function threeinarow(result::BitArray{1})::BitArray{1}
     return modified
 end
 
-function evaluate(response::Array{Int64, 1}, unitsize::Int64 = 10)::Int64
+function evaluate(response::Array{Int64, 1},
+    weight::Array{Int64,1}=collect(1:length(response)), # repeat([1], length(response))
+    unitsize::Int64 = 10)::Int64
     # Number of castles/rounds
     len      = length(response)
     # Generate random opponent response
     opponent = randomresponse(len, unitsize*len)
-    return sum( threeinarow(response .> opponent) .* collect(1:len) )
+    return sum( threeinarow(response .> opponent) .* weight )
 end
