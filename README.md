@@ -1,5 +1,5 @@
 # Colonel Blotto Game
-Some code to get an intuition about Colonel Blotto game. Problem description below.
+Some code to get an intuition about Colonel Blotto game. The variation that we are interested is as below.
 
 There are 10 castles, numbered 1, 2, 3, ... , 10, and worth 1, 2, 3, ... , 10 points respectively. You have
 100 soldiers, which you can allocate between the castles however you wish. Your opponents also
